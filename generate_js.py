@@ -20,8 +20,10 @@ class Const:
     SVG = "svg"
     DEFAULT_LOG_LEVEL = log.INFO
     OUTPUT_PATH = 'dist/material-symbols.js'
-    OUTPUT_PATH_SYMBOLS_JSON = 'validate/symbols.json'
-    CHANGELOG_OUTPUT_PATH = 'validate/changelog.md'
+    VALIDATE_DIR = 'validate'
+    OUTPUT_PATH_SYMBOLS_JSON = f'{VALIDATE_DIR}/symbols.json'
+    CHANGELOG_OUTPUT_PATH = f'{VALIDATE_DIR}/changelog.md'
+    CHANGELOG_SVG_DIR = f'{VALIDATE_DIR}/svg'
 
 log.basicConfig(level=Const.DEFAULT_LOG_LEVEL)
 
@@ -71,8 +73,8 @@ def open_symbols_json() -> dict:
 
 def make_svg_html(svg_path, symbol_name):
     svg = f'<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{svg_path}"></path></svg>'
-    file_path = f'/validate/svg/{symbol_name}.svg'
-    save_path = f'./validate/svg/{symbol_name}.svg'
+    file_path = f'{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
+    save_path = f'./{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
     save_symbols_svg(svg, save_path)
     return f'![{symbol_name}]({file_path})'
 
