@@ -1,3 +1,3 @@
 # Symbol Changelog:
 ##changed:
-  *leaf-spark-m3s (New: ![new-leaf-spark-m3s](/validate/svg/new-leaf-spark-m3s.svg), Old: ![old-leaf-spark-m3s](/validate/svg/old-leaf-spark-m3s.svg))
+  *10k-m3o (New: ![new-10k-m3o](/validate/svg/new-10k-m3o.svg), Old: ![old-10k-m3o](/validate/svg/old-10k-m3o.svg))
