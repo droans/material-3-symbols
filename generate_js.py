@@ -130,7 +130,7 @@ def create_symbol_changelog(new_symbols: dict):
         for k, v in changed_symbols.items():
             log.info(f'Handling changes {k}')
             base_changelog += '\n'
-            base_changelog += (f'##{k}:\n  *')
+            base_changelog += (f'## {k.title()}:\n  * ')
             base_changelog += '\n  * '.join(v)
     with open(Const.CHANGELOG_OUTPUT_PATH, 'w') as f:
         f.write(base_changelog)
