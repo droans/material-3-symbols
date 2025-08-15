@@ -71,8 +71,9 @@ def open_symbols_json() -> dict:
 
 def make_svg_html(svg_path, symbol_name):
     svg = f'<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{svg_path}"></path>'
-    file_path = f'./validate/svg/{symbol_name}.svg'
-    save_symbols_svg(svg, file_path)
+    file_path = f'/validate/svg/{symbol_name}.svg'
+    save_path = f'./validate/svg/{symbol_name}.svg'
+    save_symbols_svg(svg, save_path)
     return f'![{symbol_name}]({file_path})'
 
 def save_symbols_svg(svg_html, svg_path):
