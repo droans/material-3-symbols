@@ -70,7 +70,7 @@ def open_symbols_json() -> dict:
         return json.loads(f.read())
 
 def make_svg_html(path):
-    return '<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{path}"></path>'
+    return f'<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{path}"></path>'
 
 def compare_old_new_symbols(new_symbols: dict):
     old_symbols = open_symbols_json()
