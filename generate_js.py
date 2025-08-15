@@ -111,7 +111,7 @@ def pull_symbols_from_repo(repo_path):
 
 def move_symbols(base_src_dir, base_dest_dir):
     log.info(f'Moving symbols from {base_src_dir} to {base_dest_dir}')
-    src_dirs = listdir(base_src_dir)
+    src_dirs = os.listdir(base_src_dir)
     log.debug(f'Source dirs: {','.join(src_dirs)}')
     for d in src_dirs:
         src_dir = path_join(base_src_dir, d)
