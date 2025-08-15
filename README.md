@@ -1,3 +1,7 @@
+<div align="center">
+     <h1 align="center">Material Symbols for Home Assistant</h1>
+</div>
+
 **Material Symbols for Home Assistant** is a collection of 14,376 Google Material Symbols for use within Home Assistant. It uses the icon-set produced and maintained by [iconify](https://github.com/iconify/icon-sets).
 
 Credit goes to @beecho01. Symbols were taken from his [Material Symbols](https://github.com/beecho01/material-symbols) repository. This is repackaged so it works as a frontend module. Icons use `m3s` prefix and each type is suffixed with `-{type}`. Readme below is from his repository and may not fully be updated.
