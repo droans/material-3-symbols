@@ -69,8 +69,15 @@ def open_symbols_json() -> dict:
     with open(Const.OUTPUT_PATH_SYMBOLS_JSON, 'r') as f:
         return json.loads(f.read())
 
-def make_svg_html(path):
-    return f'<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{path}"></path>'
+def make_svg_html(svg_path, symbol_name):
+    svg = f'<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{svg_path}"></path>'
+    file_path = f'./validate/svg/{symbol_name}.svg'
+    save_symbols_svg(svg, file_path)
+    return f'![{symbol_name}]({file_path})'
+
+def save_symbols_svg(svg_html, svg_path):
+    with open(svg_path, 'w') as f:
+        f.write(svg_html)
 
 def compare_old_new_symbols(new_symbols: dict):
     old_symbols = open_symbols_json()
@@ -84,8 +91,8 @@ def compare_old_new_symbols(new_symbols: dict):
             new_path = v.get('path')
             old_path = old_symbols[k]['path']
             if new_path != old_path:
-                new_svg = make_svg_html(new_path)
-                old_svg = make_svg_html(old_path)
+                new_svg = make_svg_html(new_path, f'new-{k}')
+                old_svg = make_svg_html(old_path, f'old-{k}')
                 tmp = f'{k} (New: {new_svg}, Old: {old_svg})'
                 changed.append(tmp)
     
