@@ -76,7 +76,7 @@ def make_svg_html(svg_path, symbol_name):
 <svg width="42px" height="42px" xmlns="http://www.w3.org/2000/svg">
     <path d="{svg_path}"></path>
 </svg>'''
-    file_path = f'{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
+    file_path = f'/{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
     save_path = f'./{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
     save_symbols_svg(svg, save_path)
     return f'![{symbol_name}]({file_path})'
