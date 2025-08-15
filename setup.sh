@@ -1,12 +1,22 @@
 base_repo_dir=raw
 base_files_dir="/custom_components/material_symbols/data"
 repo_path="material-symbols"
+validate_dir=validate
+validate_svg_dir=${validate_dir}/svg
 repo="https://github.com/beecho01/${repo_path}"
-if ! test -d ${base_repo_dir}; then
-  echo "${base_repo_dir} folder does not exist, creating now..."
-  echo ""
-  mkdir ${base_repo_dir};
-fi
+
+make_dir_if_not_exist() {
+  if ! test -d ${@}; then
+    echo "${@} folder does not exist, creating now..."
+    echo ""
+    mkdir ${@};
+  else
+    echo "${@} folder already exists, not recreating.";
+  fi
+}
+make_dir_if_not_exist ${base_repo_dir}
+make_dir_if_not_exist ${validate_dir}
+make_dir_if_not_exist ${validate_svg_dir}
 
 cd ${base_repo_dir}
 if test -d ${repo_path}; then
