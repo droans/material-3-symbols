@@ -81,11 +81,18 @@ def make_svg_html(svg_path, symbol_name):
     save_symbols_svg(svg, save_path)
     return f'![{symbol_name}]({file_path})'
 
+def remove_old_symbols_svg():
+    files = os.listdir(Const.CHANGELOG_SVG_DIR)
+    for file in files:
+        if file.endswith('.svg'):
+            os.remove(f'{Const.CHANGELOG_SVG_DIR}/{file}')
+
 def save_symbols_svg(svg_html, svg_path):
     with open(svg_path, 'w') as f:
         f.write(svg_html)
 
 def compare_old_new_symbols(new_symbols: dict):
+    remove_old_symbols_svg()
     old_symbols = open_symbols_json()
     added = []
     removed = []
