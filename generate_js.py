@@ -73,7 +73,7 @@ def open_symbols_json() -> dict:
 
 def make_svg_html(svg_path, symbol_name):
     svg = f'''
-<svg width="42px" height="42px" xmlns="http://www.w3.org/2000/svg">
+<svg height="24px" width="24px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
     <path d="{svg_path}"></path>
 </svg>'''
     file_path = f'/{Const.CHANGELOG_SVG_DIR}/{symbol_name}.svg'
