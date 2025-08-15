@@ -41,11 +41,6 @@ There is a [Icon Finder Tool](https://beecho01.github.io/material-symbols-iconfi
 
 #### <a name="hacs-installation-recommended"></a>HACS Installation (Recommended)
 
-> <picture>
->   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/info.svg">
->   <img alt="Info" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/info.svg">
-> </picture><br>
->
 
 1. Add this to your HACS repositories.
     * In Home Assistant, navigate to your HACS dashboard
