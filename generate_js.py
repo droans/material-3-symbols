@@ -8,7 +8,10 @@ from os.path import (
     splitext,
     join as path_join,
 )
-from shutil import copytree
+from shutil import (
+    copytree,
+    move as move_file
+)
 from string import Template
 import subprocess
 from xml.dom.minidom import Document, parse
@@ -17,6 +20,8 @@ class Const:
     SVG = "svg"
     DEFAULT_LOG_LEVEL = log.INFO
     OUTPUT_PATH = 'dist/material-symbols.js'
+    OUTPUT_PATH_SYMBOLS_JSON = 'validate/symbols.json'
+    CHANGELOG_OUTPUT_PATH = 'validate/changelog.md'
 
 log.basicConfig(level=Const.DEFAULT_LOG_LEVEL)
 
@@ -53,8 +58,68 @@ def create_icon_maps(icon_base_path):
             result[icon_name] = tmp
     return result
 
+def save_symbols_json(symbols: dict):
+    with open(Const.OUTPUT_PATH_SYMBOLS_JSON, 'w') as f:
+        f.write(json.dumps(symbols))
+    return
+
+def open_symbols_json() -> dict:
+    if not os.path.exists(Const.OUTPUT_PATH_SYMBOLS_JSON):
+        return {}
+    with open(Const.OUTPUT_PATH_SYMBOLS_JSON, 'r') as f:
+        return json.loads(f.read())
+
+def make_svg_html(path):
+    return '<svg preserveAspectRatio="xMidYMid meet" focusable="false" role="img" viewBox="0 0 24 24"><path d="{path}"></path>'
+
+def compare_old_new_symbols(new_symbols: dict):
+    old_symbols = open_symbols_json()
+    added = []
+    removed = []
+    changed = []
+    for k, v in new_symbols.items():
+        if k not in old_symbols:
+            added.append(k)
+        else:
+            new_path = v.get('path')
+            old_path = old_symbols[k]['path']
+            if new_path != old_path:
+                new_svg = make_svg_html(new_path)
+                old_svg = make_svg_html(old_path)
+                tmp = f'{k} (New: {new_svg}, Old: {old_svg})'
+                changed.append(tmp)
+    
+    for k in old_symbols.keys():
+        if k not in new_symbols:
+            removed.append(k)
+    result = {}
+    if len(added):
+        result['added'] = added
+    if len(removed):
+        result['removed'] = removed
+    if len(changed):
+        result['changed'] = changed
+    return result
+
+def create_symbol_changelog(new_symbols: dict):
+    changed_symbols = compare_old_new_symbols(new_symbols)
+    base_changelog = '# Symbol Changelog:'
+    if changed_symbols == {}:
+        base_changelog += '\nNo changes'
+    else:
+        for k, v in changed_symbols.items():
+            log.info(f'Handling changes {k}')
+            base_changelog += '\n'
+            base_changelog += (f'##{k}:\n  *')
+            base_changelog += '\n  * '.join(v)
+    with open(Const.CHANGELOG_OUTPUT_PATH, 'w') as f:
+        f.write(base_changelog)
+    save_symbols_json(new_symbols)
+    return
+    
 def generate_icon_js(icon_path):
     icon_map = create_icon_maps(icon_path)
+    create_symbol_changelog(icon_map)
     template = Template(
         """const MS_ICONS_MAP = $ICONS;
 
