@@ -8,10 +8,7 @@ from os.path import (
     splitext,
     join as path_join,
 )
-from shutil import (
-    copytree,
-    move as move_file
-)
+from shutil import copytree
 from string import Template
 import subprocess
 from xml.dom.minidom import Document, parse
