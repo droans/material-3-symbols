@@ -702,22 +702,40 @@
         "name": "battery-charging-20"
     },
     {
+        "name": "battery-charging-20-2"
+    },
+    {
         "name": "battery-charging-30"
+    },
+    {
+        "name": "battery-charging-30-2"
     },
     {
         "name": "battery-charging-50"
     },
     {
+        "name": "battery-charging-50-2"
+    },
+    {
         "name": "battery-charging-60"
     },
     {
+        "name": "battery-charging-60-2"
+    },
+    {
         "name": "battery-charging-80"
+    },
+    {
+        "name": "battery-charging-80-2"
     },
     {
         "name": "battery-charging-90"
     },
     {
         "name": "battery-charging-full"
+    },
+    {
+        "name": "battery-charging-full-2"
     },
     {
         "name": "battery-error"
@@ -960,6 +978,12 @@
         "name": "bus-alert"
     },
     {
+        "name": "bus-map-pin"
+    },
+    {
+        "name": "bus-map-pin-2"
+    },
+    {
         "name": "bus-railway"
     },
     {
@@ -1080,6 +1104,9 @@
         "name": "car-defrost-mid-left"
     },
     {
+        "name": "car-defrost-mid-low-left"
+    },
+    {
         "name": "car-defrost-mid-low-right"
     },
     {
@@ -1107,6 +1134,12 @@
         "name": "car-fan-mid-right"
     },
     {
+        "name": "car-fan-recirculate"
+    },
+    {
+        "name": "car-fan-recirculate-2"
+    },
+    {
         "name": "car-gear"
     },
     {
@@ -1132,6 +1165,9 @@
     },
     {
         "name": "cards"
+    },
+    {
+        "name": "cards-stack"
     },
     {
         "name": "cards-star"
@@ -1216,6 +1252,9 @@
     },
     {
         "name": "chat-bubble"
+    },
+    {
+        "name": "chat-bubble-off"
     },
     {
         "name": "chat-dashed"
@@ -1395,6 +1434,9 @@
         "name": "computer-cancel"
     },
     {
+        "name": "computer-sound"
+    },
+    {
         "name": "concierge"
     },
     {
@@ -1548,6 +1590,9 @@
         "name": "csv"
     },
     {
+        "name": "dashboard-2-edit"
+    },
+    {
         "name": "data-exploration"
     },
     {
@@ -1645,6 +1690,9 @@
     },
     {
         "name": "detection-and-zone"
+    },
+    {
+        "name": "detection-and-zone-off"
     },
     {
         "name": "detector"
@@ -2106,6 +2154,12 @@
         "name": "eye-tracking"
     },
     {
+        "name": "eyebrow"
+    },
+    {
+        "name": "eyeglasses-2-sound"
+    },
+    {
         "name": "face-3"
     },
     {
@@ -2301,6 +2355,9 @@
         "name": "fitbit-hourly-activity"
     },
     {
+        "name": "fitbit-raquetball"
+    },
+    {
         "name": "fitness-trackers"
     },
     {
@@ -2412,6 +2469,9 @@
         "name": "font-download-off"
     },
     {
+        "name": "fork-chart"
+    },
+    {
         "name": "format-color-fill"
     },
     {
@@ -2425,6 +2485,9 @@
     },
     {
         "name": "format-paint"
+    },
+    {
+        "name": "format-paint-off"
     },
     {
         "name": "fort"
@@ -2472,6 +2535,9 @@
         "name": "frame-source"
     },
     {
+        "name": "frame-spark"
+    },
+    {
         "name": "free-cancellation"
     },
     {
@@ -2500,6 +2566,18 @@
     },
     {
         "name": "gallery-thumbnail"
+    },
+    {
+        "name": "game-stick-l3"
+    },
+    {
+        "name": "game-stick-left"
+    },
+    {
+        "name": "game-stick-r3"
+    },
+    {
+        "name": "game-stick-right"
     },
     {
         "name": "garage"
@@ -2563,6 +2641,9 @@
     },
     {
         "name": "grid-guides"
+    },
+    {
+        "name": "grid-layout-side"
     },
     {
         "name": "grid-off"
@@ -2725,6 +2806,9 @@
     },
     {
         "name": "home-storage"
+    },
+    {
+        "name": "home-storage-gear"
     },
     {
         "name": "host"
@@ -3037,6 +3121,9 @@
     },
     {
         "name": "lightbulb-2"
+    },
+    {
+        "name": "lightstrip"
     },
     {
         "name": "linked-camera"
@@ -3621,6 +3708,9 @@
         "name": "movie-edit"
     },
     {
+        "name": "movie-edit-off"
+    },
+    {
         "name": "movie-filter"
     },
     {
@@ -3826,6 +3916,12 @@
     },
     {
         "name": "notification-add"
+    },
+    {
+        "name": "notification-audio"
+    },
+    {
+        "name": "notification-audio-off"
     },
     {
         "name": "notification-important"
@@ -4072,6 +4168,9 @@
     },
     {
         "name": "phone-callback"
+    },
+    {
+        "name": "phone-cancel"
     },
     {
         "name": "phone-disabled"
@@ -4728,6 +4827,9 @@
         "name": "sell"
     },
     {
+        "name": "sell-cloud"
+    },
+    {
         "name": "send-time-extension"
     },
     {
@@ -4834,6 +4936,9 @@
     },
     {
         "name": "shield-locked"
+    },
+    {
+        "name": "shoe-cleats"
     },
     {
         "name": "shop"
@@ -4986,16 +5091,25 @@
         "name": "sound-detection-loud-sound"
     },
     {
+        "name": "soundbar"
+    },
+    {
         "name": "source-notes"
     },
     {
         "name": "space-dashboard"
     },
     {
+        "name": "space-dashboard-2"
+    },
+    {
         "name": "spatial-speaker"
     },
     {
         "name": "speaker"
+    },
+    {
+        "name": "speaker-2"
     },
     {
         "name": "speaker-group"
@@ -5055,7 +5169,16 @@
         "name": "speed-1-7x"
     },
     {
+        "name": "speed-2"
+    },
+    {
         "name": "speed-2x"
+    },
+    {
+        "name": "speed-3"
+    },
+    {
+        "name": "speed-4"
     },
     {
         "name": "speed-camera"
@@ -5068,9 +5191,6 @@
     },
     {
         "name": "split-scene-left"
-    },
-    {
-        "name": "split-scene-right"
     },
     {
         "name": "split-scene-up"
@@ -5086,6 +5206,9 @@
     },
     {
         "name": "splitscreen-landscape"
+    },
+    {
+        "name": "splitscreen-landscape-add"
     },
     {
         "name": "splitscreen-left"
@@ -5130,6 +5253,9 @@
         "name": "sports-motorsports"
     },
     {
+        "name": "sql"
+    },
+    {
         "name": "square-foot"
     },
     {
@@ -5167,6 +5293,12 @@
     },
     {
         "name": "steps"
+    },
+    {
+        "name": "sticker"
+    },
+    {
+        "name": "sticker-add"
     },
     {
         "name": "sticky-note"
@@ -5238,6 +5370,9 @@
         "name": "subtitles-off"
     },
     {
+        "name": "subwoofer"
+    },
+    {
         "name": "summarize"
     },
     {
@@ -5274,6 +5409,9 @@
         "name": "swipe-left"
     },
     {
+        "name": "swipe-left-2"
+    },
+    {
         "name": "swipe-right"
     },
     {
@@ -5293,6 +5431,9 @@
     },
     {
         "name": "switch-camera"
+    },
+    {
+        "name": "switch-off"
     },
     {
         "name": "switch-video"
@@ -5442,6 +5583,9 @@
         "name": "text-ad"
     },
     {
+        "name": "text-ad-off"
+    },
+    {
         "name": "text-compare"
     },
     {
@@ -5550,6 +5694,9 @@
         "name": "touch-double"
     },
     {
+        "name": "touch-double-2"
+    },
+    {
         "name": "touch-long"
     },
     {
@@ -5596,6 +5743,12 @@
     },
     {
         "name": "transition-slide"
+    },
+    {
+        "name": "translate-cc"
+    },
+    {
+        "name": "translate-subtitles"
     },
     {
         "name": "transportation"
@@ -5760,6 +5913,9 @@
         "name": "video-stable"
     },
     {
+        "name": "video-template"
+    },
+    {
         "name": "videocam"
     },
     {
@@ -5841,6 +5997,9 @@
         "name": "voice-chat"
     },
     {
+        "name": "voice-chat-off"
+    },
+    {
         "name": "voice-selection"
     },
     {
@@ -5890,6 +6049,9 @@
     },
     {
         "name": "wash"
+    },
+    {
+        "name": "watch-alert"
     },
     {
         "name": "watch-lock"
@@ -5946,6 +6108,9 @@
         "name": "wheelchair-pickup"
     },
     {
+        "name": "widget-menu"
+    },
+    {
         "name": "width-full"
     },
     {
@@ -5974,6 +6139,9 @@
     },
     {
         "name": "wifi-calling-bar-3"
+    },
+    {
+        "name": "wifi-device"
     },
     {
         "name": "wifi-lock"
