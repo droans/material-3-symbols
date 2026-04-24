@@ -65163,8 +65163,5 @@ async function getIconList() {
     }));
 }
 
-// window.customIcons = window.customIcons || {};
-// window.customIcons["m3s"] = { getIcon, getIconList };
-
 window.customIconsets = window.customIconsets || {};
 window.customIconsets["m3s"] = getIcon;
