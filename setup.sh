@@ -14,10 +14,13 @@ make_dir_if_not_exist() {
     echo "${@} folder already exists, not recreating.";
   fi
 }
+
+echo "Creating directories..."
 make_dir_if_not_exist ${base_repo_dir}
 make_dir_if_not_exist ${validate_dir}
 make_dir_if_not_exist ${validate_svg_dir}
 
+echo "Creating folder for repo if it doesn't already exist."
 cd ${base_repo_dir}
 if test -d ${repo_path}; then
   echo "Repo already exists, not continuing."
@@ -35,3 +38,4 @@ echo ""
 echo "Performing checkout..."
 echo ""
 git checkout
+echo "Setup complete. Please install the dependencies in the `requirements.txt` file."
