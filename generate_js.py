@@ -190,7 +190,7 @@ def pull_symbols_from_repo(repo_path):
     repo = Repo(repo_path)
     log.debug(f'Repo Working Dir: {repo.working_dir}')
     repo.remotes.origin.pull()
-    log.debug(f'Successfully pulled repo')
+    log.debug('Successfully pulled repo')
 
 def move_symbols(base_src_dir, base_dest_dir):
     log.info(f'Moving symbols from {base_src_dir} to {base_dest_dir}')
@@ -206,7 +206,7 @@ def update_symbols():
     log.info('Updating symbols...')
     repo_path = path_join('raw/material-symbols')
     if not check_repo_for_changes(repo_path):
-        log.info(f'No changes detected, not pulling or moving symbols')
+        log.info('No changes detected, not pulling or moving symbols')
         return
     pull_symbols_from_repo(repo_path)
     src_dir = path_join(repo_path, 'custom_components/material_symbols/data')
