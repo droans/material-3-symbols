@@ -29,11 +29,15 @@ def get_path(dom: Document) -> str:
     return dom.getElementsByTagName("path")[0].getAttribute("d")
 
 
-def get_keywords(dom: Document) -> str:
+def get_keywords(dom: Document) -> list:
     """Get the keywords of the svg file."""
     desc_tags = dom.getElementsByTagName("desc")
     if len(desc_tags) > 0 and desc_tags[0].firstChild is not None:
-        return desc_tags[0].firstChild.nodeValue.split(" ")
+        val = desc_tags[0].firstChild.nodeValue
+        if val:
+            return val.split(" ")
+        else:
+            return []
     else:
         return []
 
@@ -177,7 +181,7 @@ def check_repo_for_changes(repo_path):
             proc_result = output.stderr
         os.chdir(cur_dir)
         return proc_result != ''
-    except e as Exception:
+    except Exception as e:
         os.chdir(cur_dir)
         raise e
 
